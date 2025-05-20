@@ -490,7 +490,8 @@ JOptionPane.showMessageDialog(null, "Por favor, seleccione un pedido de la tabla
     }//GEN-LAST:event_txtactualizarActionPerformed
 
     private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
-        // TODO add your handling code here:
+       txtNombreClienteBuscar.setText("");
+       cargarHistorialPedidos();
     }//GEN-LAST:event_btnLimpiarActionPerformed
 
     /**

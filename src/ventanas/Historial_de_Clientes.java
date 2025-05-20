@@ -14,7 +14,7 @@ import javax.swing.table.TableRowSorter;
  *
  * @author sarah
  */
-public class Historial_de_Clientes extends javax.swing.JInternalFrame{
+public class Historial_de_Clientes extends javax.swing.JInternalFrame {
 
     DefaultTableModel modeloTabla;
     TableRowSorter<DefaultTableModel> sorter;
@@ -28,7 +28,6 @@ public class Historial_de_Clientes extends javax.swing.JInternalFrame{
         TablaClientes.setModel(modeloTabla);
         cargarClientes(); // Cargar los clientes al iniciar la ventana
     }
-
 
     private void cargarClientes() {
         modeloTabla.addColumn("ID Cliente");
@@ -47,7 +46,7 @@ public class Historial_de_Clientes extends javax.swing.JInternalFrame{
         ResultSet resultado = null;
 
         try {
-            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/chaos_app", "root", ""); 
+            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/chaos_app", "root", "");
             consulta = conexion.prepareStatement(sql);
             resultado = consulta.executeQuery();
 
@@ -258,6 +257,7 @@ public class Historial_de_Clientes extends javax.swing.JInternalFrame{
 
     private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
         txtBuscar.setText("");
+        cargarClientes();
     }//GEN-LAST:event_btnLimpiarActionPerformed
 
     private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
@@ -283,13 +283,13 @@ public class Historial_de_Clientes extends javax.swing.JInternalFrame{
         int respuesta = JOptionPane.showConfirmDialog(null, "¿Está seguro de que desea eliminar este cliente?", "Confirmar Eliminación", JOptionPane.YES_NO_OPTION);
 
         if (respuesta == JOptionPane.YES_OPTION) {
-            int idClienteAEliminar = (int) modeloTabla.getValueAt(filaSeleccionada, 0); 
+            int idClienteAEliminar = (int) modeloTabla.getValueAt(filaSeleccionada, 0);
 
             Connection conexion = null;
             PreparedStatement consulta = null;
 
             try {
-                conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/chaos_app", "root", ""); 
+                conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/chaos_app", "root", "");
                 String sql = "DELETE FROM clientes WHERE ID_Ciente = ?";
                 consulta = conexion.prepareStatement(sql);
                 consulta.setInt(1, idClienteAEliminar);
@@ -298,7 +298,7 @@ public class Historial_de_Clientes extends javax.swing.JInternalFrame{
 
                 if (filasAfectadas > 0) {
                     JOptionPane.showMessageDialog(null, "Cliente eliminado correctamente.");
-                    modeloTabla.removeRow(filaSeleccionada); // Eliminar la fila de la tabla
+                    cargarClientes(); // Volver a cargar todos los clientes
                 } else {
                     JOptionPane.showMessageDialog(null, "No se pudo eliminar el cliente.");
                 }
