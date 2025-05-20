@@ -26,10 +26,8 @@ public class Historial_de_Clientes extends javax.swing.JInternalFrame {
         initComponents();
         modeloTabla = new DefaultTableModel();
         TablaClientes.setModel(modeloTabla);
-        cargarClientes(); // Cargar los clientes al iniciar la ventana
-    }
 
-    private void cargarClientes() {
+        // Agregar las columnas al modelo de la tabla UNA VEZ
         modeloTabla.addColumn("ID Cliente");
         modeloTabla.addColumn("Nombre");
         modeloTabla.addColumn("Apellido");
@@ -39,6 +37,13 @@ public class Historial_de_Clientes extends javax.swing.JInternalFrame {
         modeloTabla.addColumn("Dirección");
         modeloTabla.addColumn("Provincia");
         modeloTabla.addColumn("Fecha de Registro");
+
+        cargarClientes(); // Cargar los clientes al iniciar la ventana
+    }
+
+    private void cargarClientes() {
+        // Limpiar las filas existentes del modelo antes de cargar nuevos datos
+        modeloTabla.setRowCount(0);
 
         String sql = "SELECT ID_Ciente, nombre, apellido, telefonoPrincipal, telefonoSecundario, correoElectronico, direccion, provincia, fechaRegistro FROM clientes";
         Connection conexion = null;
@@ -320,10 +325,10 @@ public class Historial_de_Clientes extends javax.swing.JInternalFrame {
         }
     }//GEN-LAST:event_btnEliminarActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
+/**
+ * @param args the command line arguments
+ */
+public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -334,16 +339,28 @@ public class Historial_de_Clientes extends javax.swing.JInternalFrame {
                 if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
-                }
+
+}
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Historial_de_Clientes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Historial_de_Clientes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Historial_de_Clientes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Historial_de_Clientes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Historial_de_Clientes.class  
+
+.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+
+} catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(Historial_de_Clientes.class  
+
+.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+
+} catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(Historial_de_Clientes.class  
+
+.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+
+} catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(Historial_de_Clientes.class  
+
+.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
