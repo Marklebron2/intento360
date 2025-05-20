@@ -258,9 +258,6 @@ public class Historial_de_Clientes extends javax.swing.JInternalFrame{
 
     private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
         txtBuscar.setText("");
-        if (sorter != null) {
-            sorter.setRowFilter(null); // Quita cualquier filtro aplicado
-        }
     }//GEN-LAST:event_btnLimpiarActionPerformed
 
     private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed

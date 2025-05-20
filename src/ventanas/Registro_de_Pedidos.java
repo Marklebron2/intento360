@@ -366,7 +366,8 @@ public class Registro_de_Pedidos extends javax.swing.JInternalFrame {
 
         cbx_TipodePago.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar", "Efectivo", "Tarjeta", "Transferencia" }));
 
-        cbx_Estado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar", "En almacén", "De camino", "Entregado", "Devuelto al Remitente", "Cancelado" }));
+        cbx_Estado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "En almacén", "De camino", "Entregado", "Devuelto al Remitente", "Cancelado" }));
+        cbx_Estado.setEnabled(false);
 
         jLabel12.setFont(new java.awt.Font("Segoe UI", 2, 18)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
