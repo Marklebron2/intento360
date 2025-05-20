@@ -94,7 +94,9 @@ public class Seguimientodeenvios1 extends javax.swing.JInternalFrame {
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Estado:");
 
+        cbx_estado.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
         cbx_estado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar", "En almacén", "De camino", "Entregado", "Devuelto al Remitente", "Cancelado" }));
+        cbx_estado.setEnabled(false);
         cbx_estado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbx_estadoActionPerformed(evt);
@@ -104,6 +106,9 @@ public class Seguimientodeenvios1 extends javax.swing.JInternalFrame {
         jLabel9.setFont(new java.awt.Font("Segoe UI", 2, 20)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Fecha de entrega:");
+
+        txtfechadeentrega.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
+        txtfechadeentrega.setEnabled(false);
 
         btnBuscar.setBackground(new java.awt.Color(0, 0, 0));
         btnBuscar.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
@@ -120,6 +125,9 @@ public class Seguimientodeenvios1 extends javax.swing.JInternalFrame {
         jLabel10.setFont(new java.awt.Font("Segoe UI", 2, 20)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Fecha en que se realizó el pedido:");
+
+        txtfechapedido.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
+        txtfechapedido.setEnabled(false);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);

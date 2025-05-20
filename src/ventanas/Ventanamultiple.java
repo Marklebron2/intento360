@@ -349,7 +349,7 @@ private PdfPCell crearCelda1(String texto, com.itextpdf.text.Font fuente, boolea
 
         editMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/íconos/lista-de-verificacion (1).png"))); // NOI18N
         editMenu.setMnemonic('e');
-        editMenu.setText("Gestión Producto");
+        editMenu.setText("Gestión de Producto");
         editMenu.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
 
         cutMenuItem.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -366,7 +366,7 @@ private PdfPCell crearCelda1(String texto, com.itextpdf.text.Font fuente, boolea
         menuBar.add(editMenu);
 
         jMenu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/íconos/control-parental.png"))); // NOI18N
-        jMenu2.setText("Registro de Cliente");
+        jMenu2.setText("Gestión de Cliente");
         jMenu2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jMenu2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
@@ -398,7 +398,7 @@ private PdfPCell crearCelda1(String texto, com.itextpdf.text.Font fuente, boolea
 
         fileMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/íconos/rastreo (2).png"))); // NOI18N
         fileMenu.setMnemonic('f');
-        fileMenu.setText("Gestión Pedido");
+        fileMenu.setText("Gestión de Pedido");
         fileMenu.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         fileMenu.addMenuListener(new javax.swing.event.MenuListener() {
             public void menuCanceled(javax.swing.event.MenuEvent evt) {
